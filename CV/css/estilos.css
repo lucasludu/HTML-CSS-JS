@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+body {
+    background-color: #c4c4c4;
+    font-size: 14px;
+    line-height: 20px; 
+}
+
+/* CONTENEDOR IZQUIERDO */
+
+.resumeWrapper {
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.548);
+    padding: 10px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.resumeWrapper .resumeLeft {
+    width: 35%;
+    background-color: #26252D;
+    border: 2px solid #0175B2;
+}
+
+.resumeWrapper .resumeLeft .resumeImage img {
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+    border: 2px solid #0175B2;
+}
+
+.resumeWrapper .resumeLeft .resumeImage img:hover {
+    opacity: 0.8;
+}
+
+.resumeWrapper .resumeTitle {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.resumeWrapper .resumeLeft .resumeInfo {
+    color: #fff;
+}
+
+.resumeWrapper .resumeLeft .resumeBottom {
+    padding: 20px 20px;
+}
+
+.resumeWrapper .resumeItem {
+    padding: 20px 0;
+    border-bottom: 2px solid #0175B2;
+}
+
+.resumeWrapper .resumeItem:last-child {
+    border-bottom: 0;
+}
+
+.resumeWrapper .resumeLeft .resumeRol {
+    display: none;
+}
+
+/* FIJAR ESTA */
+.resumeWrapper .resumeRol .name {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 4px;
+}
+
+.resumeWrapper .resumeLeft .resumeRol .role {
+    color: #84838B;
+}
+
+.resumeWrapper .resumeLeft .resumeContact .resumeInfo:last-child {
+    margin-top: 10px;
+}
+
+.resumeWrapper .resumeLeft .resumeContact .resumeSubTitle {
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.resumeWrapper .resumeLeft .resumeContact .resumeSubInfo {
+    margin-bottom: 3px;
+}
+
+.resumeWrapper .resumeLeft .resumeContact .resumeSubInfo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.resumeWrapper .resumeLeft .resumeContact .resumeSubInfo a:hover {
+    color: red;
+}
+
+.resumeWrapper .resumeLeft .resumeSkills .skillsList {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.resumeWrapper .resumeLeft .resumeSkills .skillsList .skillsBar p {
+    position: relative;
+    top: 3px;
+    right: 10px;
+    width: 100px;
+    height: 20px;
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+}
+
+.resumeWrapper .resumeLeft .resumeSkills .skillsList .skillsBar p span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0175B2;
+    width: 100%;
+    height: 100%;
+}
+
+/* CONTENEDOR DERECHO */
+
+.resumeWrapper .resumeRight {
+    width: 65%;
+    padding: 20px 20px;
+    color: #26252D;
+}
+
+.resumeWrapper .resumeRight .resumeRol .name {
+    color: #26252D;
+    font-size: 32px;
+}
+
+.resumeWrapper .resumeRight .resumeRol .role {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.resumeWrapper .resumeRight .resumeItem .resumeTitle {
+    color: #26252D;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.resumeWrapper .resumeRight .resumeData {
+    display: flex;
+}
+
+.resumeWrapper .resumeRight .resumeData .year {
+    padding-right: 3px;
+    width: 100px;
+    position: relative;
+}
+
+.resumeWrapper .resumeRight .resumeData .year:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 1px solid #26252d;
+    border-radius: 50%;
+}
+
+.resumeWrapper .resumeRight .resumeData .year:after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    width: 3px;
+    height: 96%;
+    background-color: #0175B2;
+}    
+
+.resumeWrapper .resumeRight .resumeData:last-child .year:after {
+    display: none;
+}
+
+.resumeWrapper .resumeRight .resumeData .content {
+    padding-left: 35px;
+    margin-bottom: 20px;
+    width: calc(100% - 100px);
+}
+
+.resumeWrapper .resumeRight .resumeData .content p:first-child {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .resumeWrapper .resumeRight .resumeRol {
+        display: none;
+    }
+    .resumeWrapper .resumeLeft .resumeRol {
+        display: block;
+    }
+    .resumeWrapper {
+        width: 95%;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+    .resumeWrapper .resumeLeft, 
+    .resumeWrapper .resumeRight {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .resumeWrapper .resumeRight {
+        padding: 20px 20px;
+    }
+    .resumeWrapper .resumeRight .resumeData {
+        flex-direction: column;
+    }
+    .resumeWrapper .resumeRight .resumeData .year {
+        padding: 0;
+        margin-bottom: 5px;
+        width: 100%;
+        color: #0175B2;
+    }
+    .resumeWrapper .resumeRight .resumeData .year:before,
+    .resumeWrapper .resumeRight .resumeData .year:after {
+        display: none;
+    }
+    .resumeWrapper .resumeRight .resumeData .content {
+        width: 100%;
+        padding: 0;
+    }
+}
